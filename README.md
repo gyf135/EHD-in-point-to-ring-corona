@@ -14,6 +14,7 @@ Here something to notice is to unselect the equations for other UDS except for p
 The diffusivity of charge density should be specified.
 The time-dependent term for potential should be unselected.
 The uds1_flux function is actually for uds2 which is the charge density.
+Remember to set the number of user-defined memory locations = 1
 4. Un-load the libudf
 5. Initialize the flow field (zero velocities should be fine)
 6. Run for 1 iteration (No need to run the whole time step)
