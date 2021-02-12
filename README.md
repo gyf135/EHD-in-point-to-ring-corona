@@ -23,3 +23,6 @@ Remember to set the number of user-defined memory locations = 1
 9. Run it until the potential is steady-state
 10. Activate the charge equation solver in solution controls
 11. Run it at time step size 1e-7, then incrementally increase the time step size as the charge density is becoming steady state.
+
+If apply it to other geometries, make sure these are correct:
+1. In the UDF file, 
