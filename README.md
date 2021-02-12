@@ -25,4 +25,7 @@ Remember to set the number of user-defined memory locations = 1
 11. Run it at time step size 1e-7, then incrementally increase the time step size as the charge density is becoming steady state.
 
 If apply it to other geometries, make sure these are correct:
-1. In the UDF file, 
+1. In the UDF file, change #define factor (2.0 * M_PI) to #define factor 1 if the geometric is 2D planar or 3D.
+2. #define x_ionization -3.0e-3 denotes the ionization zone boundary limits to avoid ionizations due to coarse mesh or large curvature in other places except for the corona anode. Change it if you need.
+3. In DEFINE_ADJUST(effective_volume,d), change t = Lookup_Thread(d, 12); to the fluid domain in your model.
+4. Change other Lookup_Thread, e.g., t = Lookup_Thread(d,14); to the correspondng boundaries in you model.
